@@ -1,0 +1,21 @@
+[
+{
+  "modid": "Sands",
+  "name": "Sands",
+  "description": "A magic system based on sands and glass",
+  "version": "${mod_version}",
+  "mcversion": "${minecraft_version}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "Delphad000r"
+  ],
+  "credits": "Delphad000r",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]

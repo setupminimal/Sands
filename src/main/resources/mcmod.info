@@ -1,0 +1,21 @@
+[
+{
+  "modid": "Sands",
+  "name": "Sands",
+  "description": "A magic system based on sands and glass",
+  "version": "1.0",
+  "mcversion": "1.7.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "Delphad000r"
+  ],
+  "credits": "To my loving family.",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
