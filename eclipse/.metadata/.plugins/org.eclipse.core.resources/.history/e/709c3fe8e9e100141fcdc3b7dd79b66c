@@ -1,0 +1,8 @@
+package io.github.setupminimal.sands;
+
+import cpw.mods.fml.common.Mod;
+
+@Mod(name="Sands", modid="Sands", version="1.7.2-1.0")
+public class Sands {
+
+}
