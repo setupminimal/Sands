@@ -1,6 +1,5 @@
 package io.github.setupminimal.sands;
 
-import io.github.setupminimal.sands.configuration.ConfigurationHandler;
 import io.github.setupminimal.sands.proxy.IProxy;
 import io.github.setupminimal.sands.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -22,7 +21,7 @@ public class Sands {
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		// Network handling, configuration file, register blocks and items
-		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+		;
 	}
 	
 	@Mod.EventHandler
