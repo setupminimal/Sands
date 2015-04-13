@@ -1,15 +1,18 @@
 package io.github.setupminimal.sands;
 
-import io.github.setupminimal.sands.configuration.ConfigurationHandler;
+import io.github.setupminimal.sands.handler.ConfigurationHandler;
 import io.github.setupminimal.sands.proxy.IProxy;
 import io.github.setupminimal.sands.reference.Reference;
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import io.github.setupminimal.sands.utility.LogHelper;
+import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(name=Reference.MOD_NAME, modid=Reference.MOD_ID, version=Reference.MOD_VERSION)
+@Mod(name=Reference.MOD_NAME, modid=Reference.MOD_ID, version=Reference.MOD_VERSION,
+		guiFactory=Reference.GUI_FACTORY_CLASS)
 public class Sands {
 	
 	@Mod.Instance(Reference.MOD_ID)
@@ -23,18 +26,20 @@ public class Sands {
 	public void preInit(FMLPreInitializationEvent event) {
 		// Network handling, configuration file, register blocks and items
 		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+		LogHelper.info("Preinitialization complete!");
 	}
 	
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		// GUIs, crafting recipes, tile entities, event handlers
-		;
+		LogHelper.info("Initialization complete!");
 	}
 	
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		// Cleanup, wrapup
-		;
+		LogHelper.info("Postinitialization complete!");
 	}
 
 }

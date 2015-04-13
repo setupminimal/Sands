@@ -17,12 +17,12 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.7.2-1.0"
-group= "com.delphad000r.properPlants" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "ProperPlants"
+version = "1.8-1.0"
+group= "io.github.setupminimal.sands" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "Sands"
 
 minecraft {
-    version = "1.7.2-10.12.1.1110"
+    version = "1.8-11.14.1.1334"
     assetDir = "eclipse/assets"
 }
 

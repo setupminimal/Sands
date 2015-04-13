@@ -1,0 +1,5 @@
+package io.github.setupminimal.sands.utility;
+
+public class LogHelper {
+
+}
