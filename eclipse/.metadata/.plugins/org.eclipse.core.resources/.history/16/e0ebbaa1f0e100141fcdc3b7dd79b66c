@@ -1,21 +1,20 @@
 package io.github.setupminimal.sands;
 
 import io.github.setupminimal.sands.proxy.IProxy;
-import io.github.setupminimal.sands.reference.Reference;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(name=Reference.MOD_NAME, modid=Reference.MOD_ID, version=Reference.MOD_VERSION)
+@Mod(name="Sands", modid="Sands", version="1.7.2-1.0")
 public class Sands {
 	
-	@Mod.Instance(Reference.MOD_ID)
+	@Mod.Instance("Sands")
 	public static Sands instance;
 	
-	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS,
-			serverSide = Reference.SERVER_PROXY_CLASS)
+	@SidedProxy(clientProxy = "io.github.setupminimal.sands.proxy.ClientProxy",
+			serverProxy = "io.github.setupminimal.sands.proxy.ServerProxy")
 	public static IProxy proxy;
 	
 	@Mod.EventHandler

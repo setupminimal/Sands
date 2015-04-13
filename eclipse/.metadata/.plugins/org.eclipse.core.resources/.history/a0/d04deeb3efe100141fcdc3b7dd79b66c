@@ -1,0 +1,5 @@
+package io.github.setupminimal.sands.proxy;
+
+public class ServerProxy implements IProxy {
+
+}
